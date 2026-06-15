@@ -1,0 +1,24 @@
+{
+  "title": "EHR Data Density Index (EDI): PySpark pipeline for utilization archetypes and data-density analysis",
+  "description": "PySpark/Databricks pipeline for GMM-4 EHR utilization archetypes, four-domain density vectors, and Charlson Comorbidity Index association analyses on OMOP CDM data. Includes cohort_1 manuscript pipeline, cohort_2a/2b validation inference, and edi_* artifact layout. Code snapshot at first manuscript submission.",
+  "upload_type": "software",
+  "publication_date": "2026-06-15",
+  "creators": [
+    { "name": "Bhatia, Abhishek" },
+    { "name": "McIntee, Tomas" },
+    { "name": "Lash, Sydney" },
+    { "name": "Pfaff, Emily" }
+  ],
+  "keywords": [
+    "electronic health records",
+    "OMOP common data model",
+    "clinical data science",
+    "patient utilization",
+    "Gaussian mixture model",
+    "Charlson Comorbidity Index",
+    "data density"
+  ],
+  "license": {
+    "id": "MIT"
+  }
+}

@@ -1,0 +1,144 @@
+# Repo ships code and docs only; OMOP data and patient-level exports stay local.
+
+# --- Secrets & credentials (never commit) ---
+.env
+.env.*
+!.env.example
+*.env
+secrets.json
+credentials.json
+*credentials*
+*secret*
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa*
+*.token
+
+# --- Raw OMOP / cohort inputs (PHI; load via ETL on your cluster) ---
+/source_data/*
+!/source_data/.gitkeep
+/derived_data/
+/raw_data/
+/data/raw/
+/data/derived/
+/data/interim/
+/synthetic/
+/fixtures/
+/sample_data/
+/test_data/
+**/OMOP*/
+**/*_OMOP_*/
+**/COHORT_*_OMOP_*/
+
+# Tabular / columnar data (regenerate from ETL or Databricks export)
+*.parquet
+*.csv
+!outputs/data/*.csv
+!outputs/tables/edi_tbl02_*.csv
+!outputs/manifest/*.csv
+*.tsv
+*.fst
+*.feather
+*.arrow
+*.orc
+*.avro
+*.delta/
+_delta_log/
+
+# --- Pipeline outputs (regenerate via 06_residual_analysis.py) ---
+/outputs/*
+!/outputs/figures/
+!/outputs/manifest/
+!/outputs/data/
+!/outputs/tables/
+/outputs/figures/*
+!/outputs/figures/**
+/outputs/manifest/*
+!/outputs/manifest/**
+/outputs/data/*
+!/outputs/data/**
+/outputs/tables/*
+!/outputs/tables/edi_tbl02_*.csv
+/outputs/reports/
+*.html
+!docs/**/*.html
+
+# --- Trained models & experiment tracking ---
+*.pkl
+*.joblib
+*.pickle
+/models/
+/mlruns/
+/checkpoints/
+/dbfs/
+**/gmm_bundle.pkl
+
+# --- Databricks / Spark local artifacts ---
+.metastore/
+spark-warehouse/
+derby.log
+*.crc
+
+# --- Editor and local workspace artifacts ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- Manuscript drafts (use docs/methods.md for public prose) ---
+*.docx
+*.doc
+*.pdf
+message.pdf
+message.md
+*_backup.py
+*_backup.*
+*.bak
+*~
+
+# --- Local experiment branches (not part of the public pipeline) ---
+/user_branches/
+**/user_branches/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+.envrc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# --- R (if used locally) ---
+.Rhistory
+.RData
+.Rdata
+.Rproj.user/
+*.Rproj
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb
+
+# --- Logs & temp ---
+*.log
+.logs/
+tmp/
+temp/
+scratch/
+*.tmp
+*.swp
+*.swo
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db

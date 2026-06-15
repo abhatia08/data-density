@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: "EHR Data Density Index (EDI) Pipeline"
+message: "If you use this software, please cite it using the metadata from this file."
+type: software
+authors:
+  - family-names: Bhatia
+    given-names: Abhishek
+  - family-names: McIntee
+    given-names: Tomas
+  - family-names: Lash
+    given-names: Sydney
+  - family-names: Pfaff
+    given-names: Emily
+repository-code: "https://github.com/abhatia08/data-density"
+url: "https://github.com/abhatia08/data-density"
+license: MIT
+version: "1.0.0"
+date-released: 2026-06-15
+doi: 10.5281/zenodo.20706796
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.20706796
+  - type: url
+    value: https://zenodo.org/records/20706796
+keywords:
+  - electronic health records
+  - OMOP
+  - utilization archetypes
+  - data density
+  - Gaussian mixture model
